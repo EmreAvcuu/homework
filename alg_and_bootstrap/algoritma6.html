@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function carpmaIslemi(a,b){
+            var isaret = 1;
+            if(a < 0){
+                isaret *= -1;
+                a = -a;
+            }
+            if(b < 0){
+                isaret *= -1;
+                b = -b;
+            } 
+            var sonuc = 0;
+            for ( var i = 0; i < b; i++){
+                sonuc = sonuc + a;
+            }
+            if (isaret === -1){
+                sonuc = -sonuc;
+            }
+            return sonuc;
+        }
+        var A = parseInt(prompt("A sayısını gir"));
+        var B = parseInt(prompt("B sayısını gir"));
+        var carpim = carpmaIslemi(A,B);
+        console.log(`${A} * ${B} = ${carpim}`);
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var sayi = parseInt(prompt("sayı gir"));
+        function tamBolenleriBul(sayi){
+            var tamBolenler = [];
+            for(var i = 1; i<=sayi; i++){
+                if (sayi % i === 0){
+                    tamBolenler.push(i);
+                }
+            }
+            return tamBolenler;
+        }
+        if (isNaN(sayi) || sayi<=0) {
+            console.log("geçerli bir pozitif sayı girilmedi");
+        }
+        else{
+            var bolenler = tamBolenleriBul(sayi);
+            console.log(`${sayi} sayısının tam bölenleri: ${bolenler.join(', ')}`);
+        }
+    </script>
+</body>
+</html>

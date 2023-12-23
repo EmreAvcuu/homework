@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function obebBul(a,b){
+            while (b !== 0){
+                let temp = b;
+                b = a % b;
+                a = temp;
+            }
+            return a;
+        }
+        let sayi1 = parseInt(prompt("birinci sayı gir"));
+        let sayi2 = parseInt(prompt("ikinci sayı gir"));
+        let obeb = obebBul(sayi1,sayi2);
+        console.log(`OBEB(${sayi1}, ${sayi2}) = ${obeb}`);
+    </script>
+    
+</body>
+</html>

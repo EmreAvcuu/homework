@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var sayi1 = parseFloat(prompt("birinci sayı gir"));
+        var sayi2 = parseFloat(prompt("ikinci sayı gir")); 
+        var sayi3 = parseFloat(prompt("üçüncü sayı gir"));
+        function ortadakiSayiyiBul(sayi1,sayi2,sayi3){
+            if( (sayi1 >= sayi2 && sayi1 <= sayi3 ) || (sayi1 <= sayi2 && sayi1 >= sayi3) ){
+                return sayi1;
+            }
+            else if( (sayi2 >= sayi1 && sayi2 <= sayi3 ) || (sayi2 <= sayi1 && sayi2 >= sayi3)){
+                return sayi2;
+            }
+            else{
+                return sayi3;
+            }
+        }
+        var ortadakiSayi = ortadakiSayiyiBul(sayi1,sayi2,sayi3);
+        console.log(`Girilen sayılar: ${sayi1}, ${sayi2}, ${sayi3}`);
+        console.log(`Büyüklük sıralamasına göre ortadaki sayı: ${ortadakiSayi}`);
+    </script>
+    
+</body>
+</html>

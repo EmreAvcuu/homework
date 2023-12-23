@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let toplam = 0;
+        let adet = 0;
+        while(true){
+            let girilenDeger = parseFloat(prompt("Bir sayı gir (Sıfır veya negatif sayı girince program sonlanacak):"))
+            if (girilenDeger <= 0){
+                break;
+            }
+            toplam += girilenDeger;
+            adet++;
+        }
+        if (adet > 0){
+            let ortalama = toplam / adet;
+            console.log(`Girilen sayıların ortalaması: ${ortalama}`);
+        }
+        else{
+            console.log("hiç sayı girilmedi");
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let tekToplam = 0;
+        let ciftToplam = 0;
+        for(let i = 1; i <= 20; i++){
+            let sayi = parseInt(prompt(`Sayı ${i}:`));
+
+            if(sayi % 2 === 0){
+                ciftToplam += sayi;
+            }
+            else{
+                tekToplam += sayi;
+            }
+        }
+        console.log(`Tek sayıların toplamı: ${tekToplam}`);
+        console.log(`Çift sayıların toplamı: ${ciftToplam}`);
+    </script>
+</body>
+</html>

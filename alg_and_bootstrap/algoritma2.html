@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var N = parseInt(prompt("fibonacci için N değeri gir"));
+        if(isNaN(N) || N<=0){
+            console.log("geçerli bir sayı girilmedi")
+        }
+        else{
+            function fibonacci(n) {
+                var fibArray = [1,1];
+                for (var i =2; i<n; i++){
+                    fibArray[i] = fibArray[i - 1] + fibArray[i - 2];
+                }
+                return fibArray;
+            }
+            console.log(`Fibonacci Dizisi (${N} eleman):`);
+            console.log(fibonacci(N));
+        }
+    </script>
+</body>
+</html>
